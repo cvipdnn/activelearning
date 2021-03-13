@@ -1,5 +1,5 @@
 # Active Learning on Computer Vision 
-Active Learning is a semi-supervised method that allows you to label less data by selecting the most important samples from the learning process. It helps you select a subset of images from a large unlabeled pool of data in such a way that obtaining annotations of those images will result in a maximal increase of model accuracy. I use Mnist Data for evaluation here. 
+Active Learning is a semi-supervised method that allows you to label less data by selecting the most important samples from the learning process. It helps you select a subset of images from a large unlabeled data in such a way that obtaining annotations of those images will result in a maximal increase of model accuracy. I use mnist data for evaluation here. 
 
 ## Getting Started
 
@@ -21,8 +21,8 @@ python activelearning_main.py
 
 ## Result
 ![](activelearning.PNG)
-Above figure provides experimental results on mnist dataset. Each chart is the mean of 3 runs with different random seeds. Even with the averaging, the result is still a  little bit sensitive when the number of samples is small. But overall, we can conclude that active learning outperformans random, margin sampling and least confidence outperformances random by a margin of 4.0%-4.5%. Another way is to look at its application. If your goal is 91.6% accuracy, you need 2064 samples to train with random and 1056 samples to train with least score, which reduces the needs of the samples about 50%.  
-Then I ran some of the rest of unlabeled data through model evaluation and took some of most confident samples to train the model(people it auto-labeling). I got extra 0.2-0.3% of accuracy. 
+Above figure provides experimental results on mnist dataset. Each chart is the mean of 3 runs with different random seeds. Even with the averaging, the result is still a little bit sensitive when the number of samples is small. But overall, we can conclude that active learning outperformans random, margin sampling and least confidence outperformances random by a margin of 4.0%-4.5%. Another way is to look at its application. If your goal is 91.6% accuracy, you need 2064 samples to train with random and 1056 samples to train with least score, which reduces the needs of the samples about 50%.  
+Then I ran some of the rest of unlabeled data through model evaluation, took some of most confident samples to train the model(auto-labeling) and I got extra 0.2%-0.3% of accuracy. 
 
 
 
